@@ -37,59 +37,64 @@ select2.addEventListener('input', () =>{
 
     const coinInput = parseInt(coin.value);
 
-    const coin1 = select1.value;
     const coin2 = select2.value;
+
     switch(coin2){
         case "ethereum":
             coinImage2.src = "ethereum-eth.svg";
             coinName2.innerHTML = "Ethereum <span>Eth</span";
+
             if (select1.value === "bitcoin"){
-                alert(`you entered ${coinInput * 2}`);
+                alert(`${coinInput} BTC = ${((coinInput * 64600) / 2521)} ETH`);
             }else if (select1.value === "ethereum"){
-                alert(`you entered ${coinInput * 3}`);
+                alert(`${coinInput} ETH = ${coinInput} ETH`);
             }else if (select1.value === "ton"){
-                alert(`you entered ${coinInput * 1}`);
+                alert(`${coinInput} TON = ${((coinInput * 5) / 2521)} ETH`);
             }else if (select1.value === "solana"){
-                alert(`you entered ${coinInput * 5}`);
+                alert(`${coinInput} SOL = ${((coinInput * 155) / 2521)} ETH`);
             }
             break;
+
         case "bitcoin":
             coinImage2.src = "bitcoin-logo-svgrepo-com.svg"
             coinName2.innerHTML = "Bitcoin <span>Btc</span"
+
             if (select1.value === "bitcoin"){
-                alert(`${coinInput}`);
+                alert(`${coinInput} BTC = ${coinInput} BTC`);
             }else if (select1.value === "ethereum"){
-                alert(`you entered ${coinInput * 3}`);
+                alert(`${coinInput} ETH = ${((coinInput * 2521) / 64600)} BTC`);
             }else if (select1.value === "ton"){
-                alert(`you entered ${coinInput * 1}`);
+                alert(`${coinInput} TON = ${((coinInput * 5) / 64600)} BTC`);
             }else if (select1.value === "solana"){
-                alert(`you entered ${coinInput * 5}`);
+                alert(`${coinInput} SOL = ${((coinInput * 155) / 64600)} BTC`);
             }
             break;
+
         case "ton":
             coinImage2.src = "toncoin-ton-seeklogo.svg";
             coinName2.innerHTML = "Ton <span>Ton</span";
             if (select1.value === "bitcoin"){
-                alert(`you entered ${coinInput * 2}`);
+                alert(`${coinInput} BTC = ${((coinInput * 64600) / 5)} TON`);
             }else if (select1.value === "ethereum"){
-                alert(`you entered ${coinInput * 3}`);
+                alert(`${coinInput} ETH = ${((coinInput * 2521) / 5)} TON`);
             }else if (select1.value === "ton"){
-                alert(`you entered ${coinInput * 1}`);
+                alert(`${coinInput} TON = ${coinInput} TON`);
             }else if (select1.value === "solana"){
-                alert(`you entered ${coinInput * 5}`);
+                alert(`${coinInput} SOL = ${((coinInput * 155) / 5)} TON`);
             }
             break;
+
         case "solana":
             coinImage2.src = "solana.svg";
             coinName2.innerHTML = "Solana <span>Sol</span";
             if (select1.value === "bitcoin"){
-                alert(`you entered ${coinInput * 2}`);
+                alert(`${coinInput} BTC = ${((coinInput * 64600) / 155)} SOL`);
             }else if (select1.value === "ethereum"){
-                alert(`you entered ${coinInput * 3}`);
+                alert(`${coinInput} ETH = ${((coinInput * 2521) / 155)} SOL`);
             }else if (select1.value === "ton"){
-                alert(`you entered ${coinInput * 1}`);
+                alert(`${coinInput} TON = ${((coinInput * 5) / 155)} SOL`);
             }else if (select1.value === "solana"){
-                alert(`you entered ${coinInput * 5}`);
+                alert(`${coinInput} SOL = ${coinInput} SOL`);
             }
     }
 });
