@@ -1,0 +1,95 @@
+
+// Omoh there should be a shorter way to write some of this logic but i know i will get better
+
+const coinName1 = document.querySelector("#coin-name1");
+const coinImage1 = document.querySelector("#coin-image1");
+const select1 = document.querySelector("#top-coin");
+
+select1.addEventListener('input', () =>{
+    const coin1 = select1.value;
+    switch(coin1){
+        case "ethereum":
+            coinImage1.src = "ethereum-eth.svg";
+            coinName1.innerHTML = "Ethereum <span>Eth</span";
+            break;
+        case "bitcoin":
+            coinImage1.src = "bitcoin-logo-svgrepo-com.svg"
+            coinName1.innerHTML = "Bitcoin <span>Btc</span"
+            break;
+        case "ton":
+            coinImage1.src = "toncoin-ton-seeklogo.svg";
+            coinName1.innerHTML = "Ton <span>Ton</span";
+            break;
+        case "solana":
+            coinImage1.src = "solana.svg";
+            coinName1.innerHTML = "Solana <span>Sol</span";
+
+    }
+});
+
+const coinName2 = document.querySelector("#coin-name2");
+const coinImage2 = document.querySelector("#coin-image2");
+const select2 = document.querySelector("#down-coin");
+
+const coin = document.querySelector("#coin");
+
+select2.addEventListener('input', () =>{
+
+    const coinInput = parseInt(coin.value);
+
+    const coin1 = select1.value;
+    const coin2 = select2.value;
+    switch(coin2){
+        case "ethereum":
+            coinImage2.src = "ethereum-eth.svg";
+            coinName2.innerHTML = "Ethereum <span>Eth</span";
+            if (select1.value === "bitcoin"){
+                alert(`you entered ${coinInput * 2}`);
+            }else if (select1.value === "ethereum"){
+                alert(`you entered ${coinInput * 3}`);
+            }else if (select1.value === "ton"){
+                alert(`you entered ${coinInput * 1}`);
+            }else if (select1.value === "solana"){
+                alert(`you entered ${coinInput * 5}`);
+            }
+            break;
+        case "bitcoin":
+            coinImage2.src = "bitcoin-logo-svgrepo-com.svg"
+            coinName2.innerHTML = "Bitcoin <span>Btc</span"
+            if (select1.value === "bitcoin"){
+                alert(`${coinInput}`);
+            }else if (select1.value === "ethereum"){
+                alert(`you entered ${coinInput * 3}`);
+            }else if (select1.value === "ton"){
+                alert(`you entered ${coinInput * 1}`);
+            }else if (select1.value === "solana"){
+                alert(`you entered ${coinInput * 5}`);
+            }
+            break;
+        case "ton":
+            coinImage2.src = "toncoin-ton-seeklogo.svg";
+            coinName2.innerHTML = "Ton <span>Ton</span";
+            if (select1.value === "bitcoin"){
+                alert(`you entered ${coinInput * 2}`);
+            }else if (select1.value === "ethereum"){
+                alert(`you entered ${coinInput * 3}`);
+            }else if (select1.value === "ton"){
+                alert(`you entered ${coinInput * 1}`);
+            }else if (select1.value === "solana"){
+                alert(`you entered ${coinInput * 5}`);
+            }
+            break;
+        case "solana":
+            coinImage2.src = "solana.svg";
+            coinName2.innerHTML = "Solana <span>Sol</span";
+            if (select1.value === "bitcoin"){
+                alert(`you entered ${coinInput * 2}`);
+            }else if (select1.value === "ethereum"){
+                alert(`you entered ${coinInput * 3}`);
+            }else if (select1.value === "ton"){
+                alert(`you entered ${coinInput * 1}`);
+            }else if (select1.value === "solana"){
+                alert(`you entered ${coinInput * 5}`);
+            }
+    }
+});

@@ -18,13 +18,14 @@
         </label>
         <div class="sub-converter">
           <div class="top">
-            <p>Select Coin</p>
+            <p>Select Coin </p>
             <div class="wrapper">
               <div class="i-wrapper">
-                <img src="bitcoin-logo-svgrepo-com.svg" alt="bitcoin">
-                <p>Bitcoin <span>Btc</span></p>
+                <img id="coin-image1" src="bitcoin-logo-svgrepo-com.svg" alt="bitcoin">
+                <p id="coin-name1">Bitcoin <span>Btc</span></p>
               </div>
               <select name="top-coin" id="top-coin">
+                <option value="" disabled selected>Choose a Cryptocurrency</option>
                 <option value="bitcoin">Bitcoin</option>
                 <option value="ethereum">Ethereum</option>
                 <option value="solana">Solana</option>
@@ -37,10 +38,11 @@
             <p>Select Coin</p>
             <div class="wrapper">
               <div class="i-wrapper">
-                <img src="bitcoin-logo-svgrepo-com.svg" alt="bitcoin">
-                <p>Bitcoin <span>Btc</span></p>
+                <img id="coin-image2" src="bitcoin-logo-svgrepo-com.svg" alt="bitcoin">
+                <p id="coin-name2">Bitcoin <span>Btc</span></p>
               </div>
               <select name="dowm-coin" id="down-coin">
+                <option value="" disabled selected>Choose a Cryptocurrency</option>
                 <option value="bitcoin">Bitcoin</option>
                 <option value="ethereum">Ethereum</option>
                 <option value="solana">Solana</option>
@@ -90,4 +92,5 @@
     </div>
     <footer> Oracle &copy 2024</footer>
   </div>
+  <script src="mad-logic.js"></script>
 </body>
