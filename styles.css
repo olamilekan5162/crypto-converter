@@ -132,7 +132,9 @@
     /* display: none; */
   }
 
-.print:hover 
+.print:hover {
+  scale: 1.04;
+}
 
   
  .rate .box {
