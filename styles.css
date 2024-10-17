@@ -117,6 +117,23 @@
     border: 1px solid #cbd5e1;
     outline: none;
   }
+
+  .print {
+    margin: 20px 150px;
+    padding: 10px 0;
+    border: 1px solid rgb(125, 179, 64);
+    background-color: rgb(176, 230, 114);
+    overflow: hidden;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: large;
+    align-content: center;
+    text-align: center;
+    /* display: none; */
+  }
+
+.print:hover 
+
   
  .rate .box {
     display: flex;

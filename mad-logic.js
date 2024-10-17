@@ -32,6 +32,7 @@ const coinImage2 = document.querySelector("#coin-image2");
 const select2 = document.querySelector("#down-coin");
 
 const coin = document.querySelector("#coin");
+const print = document.querySelector(".print")
 
 select2.addEventListener('input', () =>{
 
@@ -45,13 +46,17 @@ select2.addEventListener('input', () =>{
             coinName2.innerHTML = "Ethereum <span>Eth</span";
 
             if (select1.value === "bitcoin"){
-                alert(`${coinInput} BTC = ${((coinInput * 64600) / 2521)} ETH`);
+                print.textContent = `${coinInput} BTC = ${((coinInput * 64600) / 2521)} ETH`
+                print.style.display = 'block';
             }else if (select1.value === "ethereum"){
-                alert(`${coinInput} ETH = ${coinInput} ETH`);
+                print.textContent = `${coinInput} ETH = ${coinInput} ETH`;
+                print.style.display = 'block';
             }else if (select1.value === "ton"){
-                alert(`${coinInput} TON = ${((coinInput * 5) / 2521)} ETH`);
+                print.textContent = `${coinInput} TON = ${((coinInput * 5) / 2521)} ETH`;
+                print.style.display = 'block';
             }else if (select1.value === "solana"){
-                alert(`${coinInput} SOL = ${((coinInput * 155) / 2521)} ETH`);
+                print.textContent = `${coinInput} SOL = ${((coinInput * 155) / 2521)} ETH`;
+                print.style.display = 'block';
             }
             break;
 
@@ -60,13 +65,17 @@ select2.addEventListener('input', () =>{
             coinName2.innerHTML = "Bitcoin <span>Btc</span"
 
             if (select1.value === "bitcoin"){
-                alert(`${coinInput} BTC = ${coinInput} BTC`);
+                print.textContent = `${coinInput} BTC = ${coinInput} BTC`;
+                print.style.display = 'block';
             }else if (select1.value === "ethereum"){
-                alert(`${coinInput} ETH = ${((coinInput * 2521) / 64600)} BTC`);
+                print.textContent = `${coinInput} ETH = ${((coinInput * 2521) / 64600)} BTC`;
+                print.style.display = 'block';
             }else if (select1.value === "ton"){
-                alert(`${coinInput} TON = ${((coinInput * 5) / 64600)} BTC`);
+                print.textContent = `${coinInput} TON = ${((coinInput * 5) / 64600)} BTC`;
+                print.style.display = 'block';
             }else if (select1.value === "solana"){
-                alert(`${coinInput} SOL = ${((coinInput * 155) / 64600)} BTC`);
+                print.textContent = `${coinInput} SOL = ${((coinInput * 155) / 64600)} BTC`;
+                print.style.display = 'block';
             }
             break;
 
@@ -74,13 +83,17 @@ select2.addEventListener('input', () =>{
             coinImage2.src = "toncoin-ton-seeklogo.svg";
             coinName2.innerHTML = "Ton <span>Ton</span";
             if (select1.value === "bitcoin"){
-                alert(`${coinInput} BTC = ${((coinInput * 64600) / 5)} TON`);
+                print.textContent = `${coinInput} BTC = ${((coinInput * 64600) / 5)} TON`;
+                print.style.display = 'block';
             }else if (select1.value === "ethereum"){
-                alert(`${coinInput} ETH = ${((coinInput * 2521) / 5)} TON`);
+                print.textContent = `${coinInput} ETH = ${((coinInput * 2521) / 5)} TON`;
+                print.style.display = 'block';
             }else if (select1.value === "ton"){
-                alert(`${coinInput} TON = ${coinInput} TON`);
+                print.textContent = `${coinInput} TON = ${coinInput} TON`;
+                print.style.display = 'block';
             }else if (select1.value === "solana"){
-                alert(`${coinInput} SOL = ${((coinInput * 155) / 5)} TON`);
+                print.textContent = `${coinInput} SOL = ${((coinInput * 155) / 5)} TON`;
+                print.style.display = 'block';
             }
             break;
 
@@ -88,13 +101,17 @@ select2.addEventListener('input', () =>{
             coinImage2.src = "solana.svg";
             coinName2.innerHTML = "Solana <span>Sol</span";
             if (select1.value === "bitcoin"){
-                alert(`${coinInput} BTC = ${((coinInput * 64600) / 155)} SOL`);
+                print.textContent = `${coinInput} BTC = ${((coinInput * 64600) / 155)} SOL`;
+                print.style.display = 'block';
             }else if (select1.value === "ethereum"){
-                alert(`${coinInput} ETH = ${((coinInput * 2521) / 155)} SOL`);
+                print.textContent = `${coinInput} ETH = ${((coinInput * 2521) / 155)} SOL`;
+                print.style.display = 'block';
             }else if (select1.value === "ton"){
-                alert(`${coinInput} TON = ${((coinInput * 5) / 155)} SOL`);
+                print.textContent = `${coinInput} TON = ${((coinInput * 5) / 155)} SOL`;
+                print.style.display = 'block';
             }else if (select1.value === "solana"){
-                alert(`${coinInput} SOL = ${coinInput} SOL`);
+                print.textContent = `${coinInput} SOL = ${coinInput} SOL`;
+                print.style.display = 'block';
             }
     }
 });
