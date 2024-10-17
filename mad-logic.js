@@ -1,6 +1,11 @@
 
 // Omoh there should be a shorter way to write some of this logic but i know i will get better
 
+// const API_KEY = 'b4fd2fe29a4e2cdd59e280852b582bda8f9f761b3a88bf35d79000bbe64e8c7b';
+
+// https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD,EUR,GBP
+
+
 const coinName1 = document.querySelector("#coin-name1");
 const coinImage1 = document.querySelector("#coin-image1");
 const select1 = document.querySelector("#top-coin");
@@ -115,3 +120,4 @@ select2.addEventListener('input', () =>{
             }
     }
 });
+
